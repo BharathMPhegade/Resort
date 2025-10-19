@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Drive Photo Gallery</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo(2).png">
+  <link rel="stylesheet" href="assets/css/all_photos_styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="index.html" class="back-to-main">
+        ← Back to Main Page
+      </a>
+      <h1>📸Photo Gallery</h1>
+      <div id="image-count" class="image-count"></div>
+    </div>
+
+    <div id="loading" class="loading" style="display: none;">
+      <div class="spinner"></div>
+      <p>Loading images</p>
+    </div>
+
+    <div id="error-container"></div>
+    <div id="image-gallery" class="gallery"></div>
+  </div>
+
+  <!-- Fullscreen View -->
+  <div id="fullscreen-view" class="fullscreen-view">
+    <button class="back-button" onclick="closeFullscreenView()">
+      ← Back to Gallery
+    </button>
+    <button class="close-overlay" onclick="closeFullscreenView()">
+      ✕
+    </button>
+    <div class="fullscreen-container">
+      <img id="fullscreen-image" src=" " alt="Full size image" />
+    </div>
+    <div class="image-info">
+      <p id="fullscreen-image-name"></p>
+    </div>
+    <div class="nav-controls">
+      <button class="nav-btn" id="prev-btn">←</button>
+      <button class="nav-btn" id="next-btn">→</button>
+    </div>
+  </div>
+
+  <script src="assets/js/all_photos_script.js"></script>
+</body>
+</html>
